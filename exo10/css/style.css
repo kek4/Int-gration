@@ -1,0 +1,225 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Roboto Slab', serif;
+  color: #482637;
+  font-size: 1.4rem;
+  line-height: 2;
+  /* Background mobile */
+  background: rgb(230,72,86); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgb(230,72,86) 0%, rgb(230,72,86) 40%, rgb(230,72,86) 40%, rgb(230,72,86) 40%, rgb(72,38,55) 40%, rgb(72,38,55) 40%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgb(230,72,86) 0%,rgb(230,72,86) 40%,rgb(230,72,86) 40%,rgb(230,72,86) 40%,rgb(72,38,55) 40%,rgb(72,38,55) 40%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgb(230,72,86) 0%,rgb(230,72,86) 40%,rgb(230,72,86) 40%,rgb(230,72,86) 40%,rgb(72,38,55) 40%,rgb(72,38,55) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+/* Titres */
+h2 {
+  font-size: 1.5rem;
+  color: #FFF;
+  border-bottom:1px solid rgba(255, 255, 255, .3);
+  padding: 2% 5%;
+  margin: 3% 0;
+}
+h2 em {
+  font-style: normal;
+  color: rgba(255, 255, 255, .3);
+}
+h3 {
+  margin: 0;
+}
+h3 a {
+  color: #c54858;
+  font-size: 2rem;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Start Global */
+.clearfix::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+.socialBloc {
+  text-align: center;
+}
+.socialBloc li + li {
+  padding-top: 15px;
+}
+.socialBloc i {
+  color: #E64856;
+}
+/* End Global */
+
+/* Start Container */
+header, main, footer {
+    margin: 5% auto;
+    max-width: 90%;
+}
+/* Fin container */
+
+/* Header et navigation */
+header {
+  background-color: #FFF;
+  padding: 10px;
+}
+header > a img {
+  max-width: 40%;
+  height: auto;
+  min-width: 100px;
+}
+header nav {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+header nav ul {
+  float: right;
+}
+header nav ul li {
+  list-style: none;
+  margin: 10%;
+  text-align: right;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #482637;
+}
+/* Main */
+/* Cadre blanc autour du slider */
+.flexslider {
+  padding: 1%;
+  margin: 0;
+}
+/* On enlève les puces du flexslider */
+.flex-control-paging li a {
+  display: none;
+}
+/* Section avec les articles sur les motos */
+main h3 a img {
+  max-width: 100%;
+  height: auto;
+}
+main article {
+  background-color: #FFF;
+  margin: 0 10%;
+  padding: 0 5%;
+}
+main article h3 {
+  border-bottom: 1px solid #c54858;
+}
+main article h3 + p {
+  margin: 5% 0;
+}
+/* Section pour mieux nous connaitre */
+main  section:last-of-type p {
+  color: #FFF;
+}
+
+/* Video */
+main section:last-of-type video {
+  max-width: 100%;
+  height: auto;
+  padding: 5% 10%;
+}
+/* Dernier paragraphe */
+footer {
+  color: rgba(255, 255, 255, .3);
+  text-align: center;
+}
+footer p {
+  padding: 0 5%;
+  margin: 0;
+}
+/* Footer */
+footer nav ul {
+  padding: 15px 0;
+}
+footer nav ul li {
+  display: inline-block;
+  list-style: none;
+  color: #FFF;
+  margin: 0 5%;
+}
+footer nav ul li > a {
+  color: inherit;
+}
+/* Version desktop */
+@media all and (min-width: 800px) {
+  body {
+    /* Background desktop */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgb(255,255,255) 0%, rgb(255,255,255) 7%, rgb(230,72,86) 7%, rgb(230,72,86) 17%, rgb(72,38,55) 17%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgb(255,255,255) 0%,rgb(255,255,255) 7%,rgb(230,72,86) 7%,rgb(230,72,86) 17%,rgb(72,38,55) 17%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgb(255,255,255) 0%,rgb(255,255,255) 7%,rgb(230,72,86) 7%,rgb(230,72,86) 17%,rgb(72,38,55) 17%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+  .socialBloc li + li {
+    padding-left: 15px;
+  }
+
+  /* Header desktop */
+  header {
+    margin-top: 0;
+    max-width: 100%;
+    background-color: transparent;
+    padding: 0;
+    -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+  header nav {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  header nav > a {
+    display: inline-block;
+    width: 25%;
+  }
+  header nav ul {
+    margin-top: 30px;
+  }
+  header nav ul li {
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0;
+  }
+  header nav ul li > a {
+    color: #FFF;
+  }
+  /* Article motos desktop */
+  main article {
+    float: left;
+    width: 23%;
+    padding: 0 2%;
+    margin: 0 2.66% 0 0;
+  }
+  main article:last-of-type {
+    margin-right: 0;
+  }
+  /* Section pour nous connaitre desktop */
+  section:last-of-type div {
+    width: 50%;
+    float: left;
+  }
+  section:last-of-type div p {
+    text-align: justify;
+  }
+  section:last-of-type div ul li {
+    display: inline-block;
+  }
+  main section:last-of-type video {
+    width: 50%;
+    padding: 2% 0 0 2%;
+  }
+}

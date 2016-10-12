@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* main */
+#solution, #hebergement {
+   max-width: 80%;
+}
+#presentation {
+   background-image: url('../img/background.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 70vh;
+   padding: 5%;
+   font-size: 2rem;
+   font-weight: bold;
+   line-height: 4rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   color: #FFF;
+}
+h1 {
+   font-size: 2.4rem;
+   margin: 10px;
+}
+/* section solution et hébergement*/
+#solution h2,#hebergement h2 {
+   border: dotted 1px;
+   border-bottom: none;
+   font-size: 2rem;
+   padding: 20px;
+   line-height: 4rem;
+}
+#solution, #hebergement {
+   margin: auto;
+   margin-bottom: 10%;
+}
+#hebergement ul li span {
+   display: block;
+}
+#solution h3, #hebergement h3, #hebergement ul li span {
+   margin: 10px 0;
+}
+#solution h3, #solution i, #solution span,#hebergement h3, #hebergement i, #hebergement span {
+   color: #FB8B9B;
+}
+#solution ul li, #hebergement ul li {
+   margin: 4% 0;
+   text-align: justify;
+}
+
+@media all and (min-width: 800px) {
+   #solution ul, #hebergement ul {
+      font-size: 0;
+   }
+   #solution ul li, #hebergement ul li {
+      display: inline-block;
+      width: 32%;
+      font-size: 1.4rem;
+   }
+   #solution ul li:not(:first-of-type), #hebergement ul li:not(:first-of-type) {
+      margin-left: 2%;
+   }
+
+}

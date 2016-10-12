@@ -1,0 +1,231 @@
+@charset "UTF-8";
+* {
+   box-sizing: border-box;
+   outline: none;
+}
+html {
+   font-size: 62.5%;
+   /*max-width: 1100px;*/
+}
+body {
+   background-image: url('../img/fond.png');
+   color: #9B9B9B;
+   text-align: center;
+   font-family: 'Bree Serif', serif;
+   font-size: 1.4rem;
+}
+h1::before, h1::after, h2::before, h2::after, h3::before, h3::after{
+   content: " - ";
+}
+h2 {
+   border-bottom: solid 1px rgba(135, 136, 138, .1);
+}
+h3 {
+   text-align: left;
+}
+h2, h3, .more {
+   color: #E81961;
+}
+a {
+   color: inherit;
+   text-decoration: none;
+}
+p {
+   line-height: 2.5rem;
+}
+li {
+   list-style: none;
+   display: inline-block;
+}
+.more::after {
+   content: "../img/title.pgn";
+   font-family: 'FontAwesome';
+}
+
+header, main section:not(:first-of-type){
+   max-width: 90%;
+   margin: 0 auto;
+}
+
+/* HEADER */
+header nav {
+   display: flex;
+   align-items: center;
+   padding: 2% 0;
+}
+header nav > a {
+   width: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2rem;
+}
+header nav > a img {
+   display: inline-block;
+   margin-right: 10px;
+}
+header nav > ul {
+   width: 70%;
+   display: flex;
+   justify-content: space-around;
+   font-size: 1.4rem;
+}
+
+header nav ul li a .fa{
+   display: block;
+}
+
+/* MAIN */
+main {
+   padding-bottom: 70px;
+}
+main section:first-child {
+   /*-webkit-filter: grayscale(100%);*/
+   background-image: url('../img/bg_header.png');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 10%;
+   color: #FFF;
+}
+main section:first-child button {
+   background-color: #E81961;
+   border-radius: 5px;
+   border-color: #E81961;
+   padding: 5px;
+   color: #FFF;
+}
+main section:first-child p {
+   margin: 5% 0;
+}
+main section canvas {
+   max-width: 100%;
+   height: auto;
+}
+main section ul {
+   display: flex;
+   justify-content: space-around;
+   padding: 0;
+}
+main section ul li {
+   padding: 0 5%;
+}
+main section ul li i.fa{
+   font-size: 2rem;
+   padding: 10px;
+   background-color: rgba(135, 136, 138, .1);
+   border: solid 1px rgba(135, 136, 138, .2);
+   border-radius: 25px;
+}
+main section article, p:last-of-type {
+   text-align: justify;
+}
+main section article img {
+   width: auto;
+   max-width: 40%;
+   /*height: 30vh;*/
+   height: auto;
+   float: right;
+}
+main section article:nth-child(odd) img {
+   float: left;
+   margin-right: 2%;
+}
+main section article:nth-child(even) img {
+   float: right;
+   margin-left: 2%;
+}
+main section article a{
+   display: inline-block;
+}
+section ul li:hover i, main section button:hover, header nav ul li:hover, .more:hover {
+   animation: zoom 2.5s  infinite;
+}
+/* Form */
+main form {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;;
+}
+main form input, main form textarea {
+   border: 1px #CCC solid;
+   border-radius: 15px;
+   background-repeat: no-repeat;
+   background-position: 3px center;
+   background-size: auto 70%;
+   padding: 10px 15px 10px 50px;
+   margin-top: 20px;
+   font-size: 0.9em;
+}
+main form input {
+   width: 48%;
+}
+main form textarea {
+   width: 100%;
+   overflow: hidden;
+}
+main form input:first-of-type {
+   background-image: url('../img/bg_form_name.svg');
+}
+main form input:last-of-type {
+   background-image: url('../img/bg_form_mail.svg');
+}
+main textarea {
+   background-image: url('../img/bg_form_message.svg');
+}
+
+/*
+ * Animation for webkit
+*/
+/*@keyframes bounce {
+    0%, 40%, 80%, 100% {transform: translateY(0);}
+    20% {transform: translateY(-40px);}
+    60% {transform: translateY(-20px);}
+    90% {transform: translateY(-10px);}
+}
+@keyframes rotate {
+   from { transform: rotate(0deg); }
+   to   { transform: rotate(360deg); }
+}*/
+@keyframes zoom {
+   from { transform: none; }
+   50% {transform: scale(1.5);}
+   to   { transform: none; }
+}
+
+.clearfix::after {
+   clear: both;
+   content: ".";
+   display: block;
+   height: 0;
+   line-height: 0;
+   visibility: hidden;
+}
+@media all and (max-width: 800px) {
+   li {
+      display: block;
+   }
+   /* Header */
+   header nav {
+      text-align: left;
+      justify-content: space-between;
+   }
+   header nav > ul {
+      width: 20%;
+      display: block;
+      padding: 0;
+   }
+   header nav > a {
+   }
+   header nav ul li a .fa{
+      display: inline;
+   }
+   /* Body */
+   main section ul {
+      display: block;;
+   }
+   /* Form */
+   main form input {
+      width: 100%;
+   }
+}

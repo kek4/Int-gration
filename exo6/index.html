@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<!-- Perso CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Courgette' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>Module 6 - Ila Yoga (partie 2)</title>
+</head>
+<body>
+	<!--HEADER-->
+	<header>
+		<nav>
+			<ul>
+				<li><a class="logo" href="#"><img src="img/logo.png" width="120" height="120" alt="Logo yoga" title="Logo yoga" /></a></li>
+				<li><a href="#"><i class="fa fa-calendar-o" aria-hidden="true"></i>Agenda</a></li>
+				<li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>Livre d'or</a></li>
+				<li><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i>Album Photo</a></li>
+				<li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>Nous contacter</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--MAIN CONTENT-->
+	<main>
+		<!-- 1er et 2eme tableau-->
+		<table border="1" cellpadding="10" cellspacing="0">
+			<caption><h1>Réserver votre place pour le prochain cours de Yoga du rire !</h1></caption>
+			<thead>
+				<tr>
+					<th colspan="3">Yoga du rire avec Jacqueline (Paris)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>05 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+				<tr>
+					<td>10 Janvier 2016</td>
+					<td>16h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+				<tr>
+					<td>20 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+				<tr>
+					<td>15 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<table  border="1" cellpadding="10" cellspacing="0">
+			<thead>
+				<tr>
+					<th colspan="3">Yoga du rire avec Roger (Marseille)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>05 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+				<tr>
+					<td>10 Janvier 2016</td>
+					<td>16h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+				<tr>
+					<td>15 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+				<tr>
+					<td>15 Janvier 2016</td>
+					<td>15h30</td>
+					<td><a href="">Réserver ce crénau</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- Sections avec différents formulaires-->
+		<h2>Pour valider votre réservation, compléter ce formulaire :</h2>
+		<form method="post" action="traitement.php" class="clearfix">
+			<input type="text" name="prenom" placeholder="Votre prénom" value="" />
+			<input type="text" name="nom" placeholder="Votre nom"value="" />
+			<input type="email" name="nom" placeholder="Votre adresse mail" value="" />
+			<h3>Quels sont les raisons de votre venue ?</h3>
+			<label for="detente"><input type="checkbox" name="detente" id="detente" />Besoin de me détendre</label>
+			<label for="medecin"><input type="checkbox" name="medecin" id="medecin" />Mon médecin m'a conseillé de venir</label>
+			<label for="test"><input type="checkbox" name="test" id="test" />Je veux tester avec des amis</label>
+			<h3>Voulez-vous souscreire à notre programme de fidélité ?</h3>
+			<label for="oui"><input type="radio" name="fidelite" value="oui" id="oui" checked />Oui</label>
+			<label for="non"><input type="radio" name="fidelite" value="non" id="non" />Non</label>
+			<h3>Comment avez vous connu Omnibus ?</h3>
+			<select name="comment" id="comment">
+				<option value="internet">Par internet</option>
+				<option value="tele">A la télévision</option>
+				<option value="radio">A la radio</option>
+				<option value="rue">Une publicité dans la rue</option>
+			</select>
+		</form>
+		<!-- Bouton envoyer-->
+		<input type="submit" value="Envoyer" class="bouton" />
+	</main>
+	<!--FOOTER-->
+	<footer>
+		<p>Exercice "Formulaire & Tableau"</p>
+		<p>3WA - 2015</p>
+	</footer>
+</body>
+</html>

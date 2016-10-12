@@ -1,0 +1,172 @@
+/*GLOBAL */
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Open Sans", Arial;
+	margin: 0;
+	color: #34495E;
+	line-height: 1.8;
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+
+h1, h2, h3 {
+	font-family: 'Courgette', cursive;
+	margin: 20px 0;
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.5rem;
+}
+h3 {
+	font-size: 2rem;
+}
+a {
+	color: #49C3B4;
+	text-decoration: none;
+}
+/* Header */
+header nav {
+	text-align: center;
+}
+header nav ul li{
+	display: inline-block;
+	vertical-align: middle;
+}
+header nav ul li a {
+	font-family: 'Courgette', cursive;
+	font-size: 3rem;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 20px;
+}
+.logo {
+	padding: 0;
+}
+header nav ul li a .fa{
+	display: block;
+	margin-bottom: 10px;
+}
+/* Main */
+main {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 25px;
+}
+table {
+	width: 100%;
+	margin: 20px auto;
+	border-collapse: collapse;
+}
+th, td {
+	border:1px solid #CCC;
+	font-weight: 600;
+	padding: 10px;
+}
+th {
+	background-color: #49C3B4;
+	color: #FFF;
+	font-size: 1.5em;
+	font-family: 'Courgette', cursive;
+	text-align: left;
+}
+table tbody tr:nth-child(even) {
+	background-color: #F2F2F2;
+}
+table tbody tr td:first-of-type {
+	text-align: left;
+}
+form {
+	text-align: center;
+}
+form input, form select {
+	margin: 25px;
+}
+form input[type=text], form input[type=email] {
+	border: none;
+	border-bottom: 1px solid #49C3B4;
+}
+form input[type=text], form input[type=email], form select {
+	color: #49C3B4;
+	padding: 10px;
+}
+form input[type=text] {
+	width: 45%;
+	margin: 2.5%;
+	float: left;
+}
+form input[type=email] {
+	width: 95%;
+}
+#comment {
+	width: 95%;
+	border: 1px solid #49C3B4;
+}
+.bouton {
+	color: #FFF;
+	background-color: #49C3B4;
+	border: 2px solid;
+	padding: 10px 25px;
+}
+.bouton:hover {
+	color: #75D1C6;
+	background-color: #FFF;
+}
+/* FOOTER */
+footer {
+	background-color: #49c3b4;
+	margin: 0;
+	padding: 50px;
+}
+
+footer p {
+	color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+}
+.clearfix::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+@media (min-width: 900px) and (max-width: 1200px){
+	header nav ul li:first-of-type{
+		width: 100%;
+	}
+}
+@media (max-width: 900px){
+	header nav ul li{
+		display: block;
+	}
+	header nav ul li a{
+		display: block;
+	}
+	form input[type=text] {
+		width: 95%;
+		float: none;
+	}
+	form label {
+		text-align: left;
+		display: block;
+		margin-left: 30%;
+	}
+}
+.clearfix::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}

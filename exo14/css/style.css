@@ -1,0 +1,273 @@
+@charset "UTF-8";
+* {
+   box-sizing: border-box;
+   outline: none;
+}
+html {
+   font-size: 62.5%;
+}
+body {
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.4rem;
+   background-color: #F2F2F2;
+}
+header {
+   background-image: url('../img/bg.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+h2, h3 {
+   font-family: 'Amaranth', sans-serif;
+}
+h2 {
+   text-align: left;
+}
+a {
+   color: inherit;
+   text-decoration: none;
+}
+header a, main a, footer > nav > ul > li > a {
+   text-transform: uppercase;
+}
+ul {
+   padding: 0;
+}
+li {
+   list-style: none;
+}
+h2
+.borderOmbre {
+   box-shadow: 0px 0px 10px 0px #cfcfcf;
+   -webkit-box-shadow: 0px 0px 10px 0px #cfcfcf;
+}
+#bienfaitsThe ,#choixThe, #selection{
+   max-width: 90%;
+   margin: 5% auto;
+}
+#bienfaitsThe ,#choixThe, #selection ul li{
+   background-color: #FFF;
+}
+#selection article:hover, #choixThe:hover, #bienfaitsThe:hover {
+   box-shadow: 0px 0px 10px 10px #cfcfcf;
+   -webkit-box-shadow: 0px 0px 10px 10px #cfcfcf;
+}
+/* Header */
+header p {
+   margin-top: 0;
+   background-color: rgba(135, 158, 15, 0.8);
+   font-size: 1rem;
+   padding: 5px 0;
+}
+header {
+   color: #FFF;
+}
+header nav  ul li{
+   padding: 2% 0;
+}
+header nav  ul li a:hover{
+   display: block;
+   animation: zoom 2.5s  infinite;
+}
+@keyframes zoom {
+   from { transform: none; }
+   50% {transform: scale(1.5);}
+   to   { transform: none; }
+}
+#panier {
+   display: none;
+}
+/* Main */
+/* Article Bienfaits thé */
+#bienfaitsThe {
+   color: #FFF;
+   background-color: #FFF;
+   line-height: 2.5rem;
+   padding: 2%;
+}
+#bienfaitsThe div {
+   background-color: rgb(176,196,76);
+   padding: 4% 6%;
+   margin-bottom: 4%;
+   text-align: justify;
+}
+#bienfaitsThe img {
+   width: 100%;
+   height: auto;
+}
+/*Section choix thé */
+#choixThe{
+   padding: 2%;
+}
+#choixThe ul li a img{
+   display: block;
+   margin: auto;
+}
+#choixThe:hover ul li a{
+   display: inline-block;
+   filter:opacity(40%);
+   -webkit-filter: opacity(40%);
+}
+#choixThe ul li:hover a{
+   filter: none;
+   -webkit-filter: none;
+}
+/* Section selection */
+.panier {
+   text-align: left;
+   color: #FFF;
+   padding: 2%;
+}
+.panier::before {
+   content: url('../img/title.png');
+   margin-right: 10px;
+}
+#selection ul li {
+   margin-bottom: 10%;
+}
+#selection ul li article{
+   padding-bottom: 2%;
+}
+#selection h2:last-of-type {
+   text-align: center;
+}
+#selection ul li article img {
+   width: 100%;
+   height: auto;
+}
+.nouveaute {
+   background-color: #E26A6A;
+}
+.bestSell {
+   background-color: #F4B350;
+}
+.coupCoeur {
+   background-color: #4ECDC4;
+}
+/* Footer nav */
+footer {
+   color: #FFF;
+   background-color: #96B011;
+   background-image: url('../img/bg.jpg');
+   background-position: bottom;
+   background-repeat: no-repeat;
+}
+#blocBottom {
+   background-color: rgba(135, 158, 15, 0.8);
+   padding: 5% 0;
+}
+#blocBottom i{
+   font-size: 3rem;
+   display: block;
+   margin: 10px 0;
+}
+footer nav ul {
+   padding: 3% 0;
+   margin: 0;
+}
+footer li {
+   padding: 10px 0;
+}
+/* Menu déroulant du footer */
+footer > nav > ul li .submenu ul{
+   max-height:0;
+   left: 0;
+   right: 0;
+   overflow:hidden;
+   padding: 0;
+   transition: all 1s;
+}
+footer > nav > ul li:hover .submenu ul{
+   max-height: 300px;
+}
+/* Version desktop */
+@media all and (min-width: 800px) {
+   /* Header */
+   header nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 90%;
+      margin: 0 auto;
+   }
+   #logo {
+      margin-left: 4%;
+   }
+   #panier {
+      display: flex;
+      margin-right: 4%;
+      text-align: right;
+      line-height: 2.2rem;
+   }
+   #panier i {
+      font-size: 4.5rem;
+      margin-left: 5px;
+      opacity: 0.7;
+   }
+   header nav > ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.4rem;
+   }
+   /* Section bienfaits du thé */
+   #bienfaitsThe{
+      position: relative;
+   }
+   #bienfaitsThe div {
+      width: 45%;
+      height: auto;
+      text-align: left;
+      padding: 2%;
+      background-color: rgba(176,196,76,0.8);
+      position: absolute;
+      top: 50px;
+   }
+   /* Section choix thé */
+   #choixThe ul{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+   }
+   /* Aside nouveautés best-sellers.... */
+   #selection ul {
+      font-size: 0;
+   }
+   #selection ul li {
+      display: inline-block;
+      width: 32%;
+      font-size: 1.4rem;
+   }
+   #selection h2 {
+      margin-top: 0;
+   }
+   #selection ul li:not(first-of-type) {
+      margin-left: 2%;
+   }
+   #selection ul li:first-of-type {
+      margin-left: 0;
+   }
+   /* Footer */
+   #blocBottom {
+      padding: 1% 0;
+   }
+   #blocBottom ul{
+      display: flex;
+      justify-content: space-around;
+   }
+   /* Menue déroulant */
+   footer nav ul {
+      display: flex;
+      justify-content: space-around;
+   }
+   .submenu ul {
+      display: flex;
+      flex-direction: column;
+   }
+   footer > nav > ul li .submenu ul {
+      position: inherit;
+   }
+}

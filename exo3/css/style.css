@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* Global */
+*{
+	box-sizing: border-box;
+	outline: none;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	font-family: verdana, sans-serif;
+	color: #666666;
+	background-image: url('../img/fond.png');
+	line-height: 1.2;
+}
+header, main {
+	max-width: 750px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+}
+h2 {
+	font-size: 2.4rem;
+	color: #B8CB21;
+	margin: 20px 0;
+}
+a, h2 {
+	font-family: 'Oswald', sans-serif;
+	padding: 10px;
+}
+/* Header */
+header {
+	background-color: #B8CB21;
+	padding: 25px;
+}
+header > a {
+	float: left;
+}
+header nav {
+	padding: 50px 0;
+	float: right;
+	color: #2C4726;
+}
+header nav ul li{
+	display: inline-block;
+}
+header nav ul li a {
+	display: inline-block;
+	color: #2C4726;
+	padding: 10px;
+	margin: 15px;
+	font-size: 2rem;
+}
+/*main*/
+main {
+	background-color: #FFFFFF;
+	padding: 25px;
+}
+main img {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+main div h2 i {
+	margin-right: 10px
+}
+main div ul {
+	margin: 15px 0;
+}
+main div ul li {
+	list-style: inside;
+	margin-left: 15px;
+}
+main .btnReadMore {
+	float: right;
+	background-color: #B8CB21;
+	color: #FFFFFF;
+	padding: 10px;
+	text-decoration: none;
+}
+main .btnReadMore:hover {
+	background-color: #FFFFFF;
+	color: #B8CB21;
+}
+/*footer*/
+footer p {
+	text-align: center;
+}
+/*clear pour rétablir le flux après un floa*/
+.clearfix::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
